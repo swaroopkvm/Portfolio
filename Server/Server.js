@@ -6,7 +6,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT||3001;
 const corsOptions = {
-  origin: 'https://portfolio-fm94.onrender.com',
+   origin: 'https://portfolio-fm94.onrender.com',
+
   allowedHeaders: ['Content-Type', 'Authorization'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
@@ -38,9 +39,10 @@ app.post('/submit-form', (req, res) => {
     ${description}.
     
     Notification needed:${notification}
+    Replyto : ${email}.
     Thanks & Regards,
     ${name},
-    Reply to:${email}.
+    
     `;
     // Email data
     const mailOptions = {

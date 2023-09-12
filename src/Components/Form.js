@@ -17,6 +17,7 @@ const Form = (props) => {
   const [formfilled, setformfilled] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showDisclaimer, setshowDisclaimer] = useState(true);
+  const [loading, setLoading] = useState(false);
    
   useEffect(() => {
 
@@ -40,6 +41,7 @@ const Form = (props) => {
   };
   const handlesubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try
     {
       const response = await fetch(serverURl.nodeserverurl+'submit-form', {
@@ -57,6 +59,7 @@ const Form = (props) => {
         document.getElementById('description').value = '';
         document.getElementById('notification').checked = false;
         setformfilled(false);
+        
         formData.subject = '';
         setFormData(formData);
 
@@ -68,7 +71,7 @@ const Form = (props) => {
     {
       console.error(error);
     }
-   
+   setLoading(false);
   };
    
   const closePopup = () => {      
@@ -97,8 +100,10 @@ const Form = (props) => {
         <textarea rows='6' placeholder='Type your Message here...' id='description' onChange={handleChange} required />
         
         <button type='submit' id='displaybtn'
-          className={`${formfilled ? 'btn' : 'hidden'}`}>Submit</button>         
+          className={`${formfilled ? 'btn' : 'hidden'}`}>
+          {loading ? 'Submitting...' : 'Submit'}</button>         
       </form>
+      {loading && <div className="progress-bar" />}
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
