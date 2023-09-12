@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.b08533ba.css",
-    "main.js": "/Portfolio/static/js/main.0b00bf7f.js",
-    "static/media/ProjectsIMage.jpg": "/Portfolio/static/media/ProjectsIMage.70af6fb402eba483e531.jpg",
-    "static/media/Elibrary.png": "/Portfolio/static/media/Elibrary.8780a21bf82646790fed.png",
-    "static/media/intro-bg.jpg": "/Portfolio/static/media/intro-bg.cf2364827d8b8a98642e.jpg",
-    "static/media/VLTD.png": "/Portfolio/static/media/VLTD.8fcc4fb9b38133ef50c6.png",
-    "static/media/dotnet.jpg": "/Portfolio/static/media/dotnet.d2ea4783cac0da9e3d44.jpg",
-    "static/media/VDEM.png": "/Portfolio/static/media/VDEM.4343c625258fe516d132.png",
-    "static/media/react1.jpg": "/Portfolio/static/media/react1.d63ca3791694cd8f6f49.jpg",
-    "static/media/Fullstackdevelopment.png": "/Portfolio/static/media/Fullstackdevelopment.367205b7cf17035633ce.png",
-    "static/media/swaroop.png": "/Portfolio/static/media/swaroop.90d051071ab0cd223c98.png",
-    "static/media/dotnet1.jpg": "/Portfolio/static/media/dotnet1.36ab7c283931bb843b8d.jpg",
-    "static/media/Fullstackdevelpment1.jpg": "/Portfolio/static/media/Fullstackdevelpment1.6a6d5a407507c0e0b5b7.jpg",
-    "static/media/react2.webp": "/Portfolio/static/media/react2.8aa659a4278a7132e6f4.webp",
-    "index.html": "/Portfolio/index.html",
-    "main.b08533ba.css.map": "/Portfolio/static/css/main.b08533ba.css.map",
-    "main.0b00bf7f.js.map": "/Portfolio/static/js/main.0b00bf7f.js.map"
+    "main.css": "/static/css/main.e9f1b0d4.css",
+    "main.js": "/static/js/main.9fbae5d2.js",
+    "static/media/ProjectsIMage.jpg": "/static/media/ProjectsIMage.70af6fb402eba483e531.jpg",
+    "static/media/Elibrary.png": "/static/media/Elibrary.8780a21bf82646790fed.png",
+    "static/media/intro-bg.jpg": "/static/media/intro-bg.cf2364827d8b8a98642e.jpg",
+    "static/media/VLTD.png": "/static/media/VLTD.8fcc4fb9b38133ef50c6.png",
+    "static/media/dotnet.jpg": "/static/media/dotnet.d2ea4783cac0da9e3d44.jpg",
+    "static/media/VDEM.png": "/static/media/VDEM.4343c625258fe516d132.png",
+    "static/media/react1.jpg": "/static/media/react1.d63ca3791694cd8f6f49.jpg",
+    "static/media/Fullstackdevelopment.png": "/static/media/Fullstackdevelopment.367205b7cf17035633ce.png",
+    "static/media/swaroop.png": "/static/media/swaroop.90d051071ab0cd223c98.png",
+    "static/media/dotnet1.jpg": "/static/media/dotnet1.36ab7c283931bb843b8d.jpg",
+    "static/media/Fullstackdevelpment1.jpg": "/static/media/Fullstackdevelpment1.6a6d5a407507c0e0b5b7.jpg",
+    "static/media/react2.webp": "/static/media/react2.8aa659a4278a7132e6f4.webp",
+    "index.html": "/index.html",
+    "main.e9f1b0d4.css.map": "/static/css/main.e9f1b0d4.css.map",
+    "main.9fbae5d2.js.map": "/static/js/main.9fbae5d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.b08533ba.css",
-    "static/js/main.0b00bf7f.js"
+    "static/css/main.e9f1b0d4.css",
+    "static/js/main.9fbae5d2.js"
   ]
 }
