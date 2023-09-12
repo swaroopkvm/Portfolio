@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"TECHNO-427-10544-stderr-1694417043799.txt","computername":"TECHNO-427","pid":10544,"type":"stderr","created":1694417043799},{"file":"TECHNO-427-11540-stderr-1694417118881.txt","computername":"TECHNO-427","pid":11540,"type":"stderr","created":1694417118881},{"file":"TECHNO-427-11768-stderr-1694417289776.txt","computername":"TECHNO-427","pid":11768,"type":"stderr","created":1694417289776},{"file":"TECHNO-427-12540-stderr-1694421586831.txt","computername":"TECHNO-427","pid":12540,"type":"stderr","created":1694421586831},{"file":"TECHNO-427-14508-stderr-1694416605311.txt","computername":"TECHNO-427","pid":14508,"type":"stderr","created":1694416605311},{"file":"TECHNO-427-14616-stderr-1694420897198.txt","computername":"TECHNO-427","pid":14616,"type":"stderr","created":1694420897198},{"file":"TECHNO-427-16520-stderr-1694417145298.txt","computername":"TECHNO-427","pid":16520,"type":"stderr","created":1694417145298},{"file":"TECHNO-427-17188-stderr-1694417042102.txt","computername":"TECHNO-427","pid":17188,"type":"stderr","created":1694417042102},{"file":"TECHNO-427-1724-stderr-1694417044645.txt","computername":"TECHNO-427","pid":1724,"type":"stderr","created":1694417044645},{"file":"TECHNO-427-17312-stderr-1694417053102.txt","computername":"TECHNO-427","pid":17312,"type":"stderr","created":1694417053102},{"file":"TECHNO-427-17320-stderr-1694417119685.txt","computername":"TECHNO-427","pid":17320,"type":"stderr","created":1694417119685},{"file":"TECHNO-427-19936-stderr-1694420840252.txt","computername":"TECHNO-427","pid":19936,"type":"stderr","created":1694420840252},{"file":"TECHNO-427-20676-stderr-1694424075401.txt","computername":"TECHNO-427","pid":20676,"type":"stderr","created":1694424075401},{"file":"TECHNO-427-20676-stdout-1694424075397.txt","computername":"TECHNO-427","pid":20676,"type":"stdout","created":1694424075397},{"file":"TECHNO-427-21904-stderr-1694416651085.txt","computername":"TECHNO-427","pid":21904,"type":"stderr","created":1694416651085},{"file":"TECHNO-427-2360-stderr-1694416221341.txt","computername":"TECHNO-427","pid":2360,"type":"stderr","created":1694416221341},{"file":"TECHNO-427-2556-stderr-1694417290589.txt","computername":"TECHNO-427","pid":2556,"type":"stderr","created":1694417290589},{"file":"TECHNO-427-2772-stderr-1694420839462.txt","computername":"TECHNO-427","pid":2772,"type":"stderr","created":1694420839462},{"file":"TECHNO-427-2804-stderr-1694422162736.txt","computername":"TECHNO-427","pid":2804,"type":"stderr","created":1694422162736},{"file":"TECHNO-427-5344-stderr-1694420838638.txt","computername":"TECHNO-427","pid":5344,"type":"stderr","created":1694420838638},{"file":"TECHNO-427-7848-stderr-1694421587618.txt","computername":"TECHNO-427","pid":7848,"type":"stderr","created":1694421587618},{"file":"TECHNO-427-9628-stderr-1694417053885.txt","computername":"TECHNO-427","pid":9628,"type":"stderr","created":1694417053885}];
+        var lastUpdated = 1694424075853;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>

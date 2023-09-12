@@ -1,0 +1,81 @@
+.hero-img{
+    width:100%;
+    background: rgba(0, 0, 0, 0.5);
+    height:60vh;
+    position: relative;
+
+}
+.hero-img::before{
+    content: "";
+    /* background: url("../Assets/ProjectsIMage.jpg"); */
+    background-size: cover;
+    background-position: center top;
+    position: absolute;
+    height:100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: carousel 10s linear infinite;
+    opacity: 0.8;
+}
+@keyframes carousel {
+    0% {
+        background-image: url("../Assets/ProjectsIMage.jpg");
+    }
+
+    25% {
+        background-image: url("../Assets/Fullstackdevelopment.png");
+    }
+
+    50% {
+        background-image: url("../Assets/Fullstackdevelpment1.jpg");
+    }
+
+    75% {
+        background-image: url("../Assets/dotnet.jpg");
+    }
+
+    100% {
+        background-image: url("../Assets/dotnet1.jpg");
+   
+    }
+}
+/* .hero-img::before {
+    content: "";
+    background: url("../Assets/ProjectsIMage.jpg");
+    background-size: cover;
+    background-position: center top;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+.heading{
+    width: 100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-img h1{
+    font-size: 2.8rem;
+}
+.hero-img p{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+@media screen and (max-width:640px){
+    .hero-img h1 {
+            font-size: 1.8rem;
+        }
+    
+        .hero-img p {
+            font-size: 1rem;
+        text-align: center;
+        }
+}
